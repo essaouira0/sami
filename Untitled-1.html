@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sami BAKARIDE - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sami BAKARIDE</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="projects.html">Projets</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Admin</a>
+    </nav>
+  </header>
+
+  <section class="profile">
+    <img src="profile.jpg" alt="Photo de Sami">
+    <h2>Jeune et Enthousiaste</h2>
+    <p>Technicien en Assistance Administrative – Option Gestion. Passionné par le développement de mes compétences et la gestion de projets.</p>
+    <ul>
+      <li><strong>Date de naissance:</strong> 13/10/2003</li>
+      <li><strong>Email:</strong> samibakaride4@gmail.com</li>
+      <li><strong>Téléphone:</strong> +212 617342582</li>
+      <li><strong>Langues:</strong> Arabe, Tamazight, Français, Anglais</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Sami BAKARIDE</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Mes Projets & Expériences</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="projects.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="projects">
+  <div class="project-card">
+    <h3>Animation en Colonies de Vacances</h3>
+    <p>Participation et animation dans divers camps nationaux et internationaux de 2022 à 2024.</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Stages Professionnels</h3>
+    <p>Expérience en Ressources Humaines à l'Hôpital Sidi Mohamed Ben Abdellah et Sofitel Essaouira Mogador.</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Engagement Associatif</h3>
+    <p>Membre actif et président dans plusieurs associations locales pour le développement communautaire.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Sami BAKARIDE</p>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Contactez-moi</h1>
+</header>
+
+<form class="contact-form">
+  <label>Nom :</label>
+  <input type="text" required>
+  
+  <label>Email :</label>
+  <input type="email" required>
+  
+  <label>Message :</label>
+  <textarea required></textarea>
+  
+  <button type="submit">Envoyer</button>
+</form>
+
+<footer>
+  <p>© 2025 Sami BAKARIDE</p>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Admin Dashboard</h1>
+</header>
+
+<section class="dashboard">
+  <h2>Gérer les Projets</h2>
+  <form id="projectForm">
+    <input type="text" id="projectName" placeholder="Nom du projet" required>
+    <textarea id="projectDesc" placeholder="Description" required></textarea>
+    <button type="submit">Ajouter</button>
+  </form>
+  
+  <ul id="projectList"></ul>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #f4f4f4;
+}
+header {
+  background: #333; color: white; padding: 1em; text-align: center;
+}
+nav a {
+  color: white; margin: 0 10px; text-decoration: none;
+}
+.profile, .projects, .contact-form, .dashboard {
+  padding: 20px;
+  background: white;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+.project-card {
+  border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px;
+}
+button {
+  background: #333; color: white; border: none; padding: 10px;
+  cursor: pointer; border-radius: 5px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #f4f4f4;
+}
+header {
+  background: #333; color: white; padding: 1em; text-align: center;
+}
+nav a {
+  color: white; margin: 0 10px; text-decoration: none;
+}
+.profile, .projects, .contact-form, .dashboard {
+  padding: 20px;
+  background: white;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+.project-card {
+  border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px;
+}
+button {
+  background: #333; color: white; border: none; padding: 10px;
+  cursor: pointer; border-radius: 5px;
+}
+document.getElementById('projectForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  let name = document.getElementById('projectName').value;
+  let desc = document.getElementById('projectDesc').value;
+  
+  let li = document.createElement('li');
+  li.textContent = `${name} - ${desc}`;
+  document.getElementById('projectList').appendChild(li);
+  
+  this.reset();
+});
